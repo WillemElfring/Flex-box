@@ -1,0 +1,129 @@
+body {
+ font-family: sans-serif;
+    margin: 0;
+}
+
+header{
+    background-image: url(foto/maxresdefault.jpg);
+    color: white;
+    height: 150px;
+    width: 100%;
+    
+}
+
+.links ul{
+    background-color: black;
+    text-align: center;
+    border-top: 2px solid white;
+    height: 50px;
+    display:flex;
+    justify-content:space-around; 
+    align-items: center;
+    list-style-type: none;
+}
+
+
+.links ul a{
+    color: black;
+    background-color: white;
+    font-size: 120%;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 20px;
+    
+}
+
+.links ul a:hover{
+    color: aqua;
+}
+
+header h1 {
+    margin: 0;
+    padding: 1rem;
+}
+
+aside  {
+    padding: 1em;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+article{
+    padding: 1em;
+}
+
+footer{
+    padding: 1em;
+    background-color: #444;
+    color: white;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.zoeken{
+    display: flex;
+    width: 100px;
+    
+}
+
+.zoeken input{
+    flex: 3 0 auto;
+}
+
+
+.zoeken button{
+    flex: 1 0 auto;
+}
+
+aside img{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+aside{
+    order: 1;
+}
+
+footer:after {
+ content: 'Dit is voor mobiel'
+}
+   
+
+
+@media screen and (min-width: 26em) {
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    article{
+        width: 100%;
+    }
+    aside{
+        flex: 1;
+    }
+    footer:after {
+        content: 'dit is voor apparaten tussen 26 em en 36 em';
+    }
+}
+
+@media screen and (min-width: 36em){
+    main{
+        flex-wrap: nowrap;
+    }
+    article{
+        width: auto;
+        flex: 2;
+    }
+    
+    aside{
+        order: 0;
+    }
+    footer:after {
+        content: 'dit is voor schremen groter dan 36 em';
+    }
+}
